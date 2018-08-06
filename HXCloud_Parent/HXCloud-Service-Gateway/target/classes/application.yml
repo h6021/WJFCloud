@@ -1,0 +1,17 @@
+server:
+  port: 28004
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka/
+      
+spring:
+  application:
+    name: HXCloud-Service-Gateway
+    
+zuul:
+  routes:
+    api:
+      path: /api/**
+      serviceId: SERVICE-PROVIDERS

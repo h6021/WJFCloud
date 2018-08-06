@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: HXCloud-Service-Monitor
+    
+server:
+  port: 28005

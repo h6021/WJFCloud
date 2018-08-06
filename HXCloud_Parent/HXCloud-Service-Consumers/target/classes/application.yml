@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: HXCloud-Service-Consumers
+    
+server:
+  port: 28003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://127.0.0.1:28001/eureka/
+  instance:
+    ip-address: true
+    
+feign:
+  hystrix:
+    enabled: true
+    
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream
+    

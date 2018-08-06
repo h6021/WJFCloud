@@ -1,0 +1,24 @@
+server:
+  port: 28001 # 指定该Eureka实例的端口
+  
+spring:
+  application:
+    name: HXCloud-Service-Eureka
+  profiles:
+    active: 127.0.0.1 
+
+eureka:
+  instance:
+    hostname: 127.0.0.1 #peer1 # 指定该Eureka实例的主机名
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+
+security:
+  basic:
+    enabled: true #开启认证
+  user:
+    name: 123
+    password: 123 

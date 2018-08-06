@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: HXCloud-Service-Providers
+    
+server:
+  port: 28002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://127.0.0.1:28001/eureka/
+  instance:
+    ip-address: true

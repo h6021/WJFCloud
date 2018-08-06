@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: HXCloud-Service-Turbine
+    
+server:
+  port: 28006
+
+management:
+  server:
+    port: 28007
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:28001/eureka/
+      
+turbine:
+  app-config: HXCloud-Service-Consumers
+  cluster-name-expression: new String("default")
+  combine-host-port: true
